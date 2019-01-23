@@ -2,12 +2,12 @@ import javafx.scene.paint.Color;
 
 public class Saab95 {
 
-	public boolean turboOn;
+	private boolean turboOn;
 
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
-	public Color color; // Color of the car
-	public String modelName; // The car model name
+	private Color color; // Color of the car
+	private String modelName; // The car model name
 
 	public Saab95() {
 		color = Color.BLACK;

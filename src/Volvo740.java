@@ -2,12 +2,12 @@ import javafx.scene.paint.Color;
 
 public class Volvo740 {
 
-	public final static double trimFactor = 1.25;
+	private final static double trimFactor = 1.25;
 
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
-	public Color color; // Color of the car
-	public String modelName; // The car model name
+	private Color color; // Color of the car
+	private String modelName; // The car model name
 
 	public Volvo740() {
 		color = Color.RED;
