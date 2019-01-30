@@ -4,40 +4,10 @@ public class Saab95 extends Car{
 
 	private boolean turboOn;
 
-	public double enginePower; // Engine power of the car
-	public double currentSpeed; // The current speed of the car
-	private Color color; // Color of the car
-	private String modelName; // The car model name
-
-	public Saab95(double enginePower, Color color, String modelName) {
+	public Saab95(double ep, Color c, String mn, double tf) {
 		
-		super(enginePower, color, modelName);
+		super(ep, c, mn, tf);
 		
-		/* color = Color.BLACK;
-		enginePower = 125;
-		turboOn = false;
-		modelName = "Saab95";
-		stopEngine(); */
-	}
-
-	public double getEnginePower() {
-		return enginePower;
-	}
-
-	public double getCurrentSpeed() {
-		return currentSpeed;
-	}
-
-	public Color getColor() {
-		return color;
-	}
-
-	public void startEngine() {
-		currentSpeed = 0.1;
-	}
-
-	public void stopEngine() {
-		currentSpeed = 0;
 	}
 
 	public void setTurboOn() {
@@ -48,26 +18,4 @@ public class Saab95 extends Car{
 		turboOn = false;
 	}
 
-	public double speedFactor() {
-		double turbo = 1;
-		if (turboOn)
-			turbo = 1.3;
-		return enginePower * 0.01 * turbo;
-	}
-
-	public void incrementSpeed(double amount) {
-		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
-	}
-
-	public void decrementSpeed(double amount) {
-		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
-	}
-
-	public void gas(double amount) {
-		incrementSpeed(amount);
-	}
-
-	public void brake(double amount) {
-		decrementSpeed(amount);
-	}
 }
