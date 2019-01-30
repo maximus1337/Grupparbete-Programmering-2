@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Saab95 {
+public class Saab95 extends Car{
 
 	private boolean turboOn;
 
@@ -9,12 +9,15 @@ public class Saab95 {
 	private Color color; // Color of the car
 	private String modelName; // The car model name
 
-	public Saab95() {
-		color = Color.BLACK;
+	public Saab95(double enginePower, Color color, String modelName) {
+		
+		super(enginePower, color, modelName);
+		
+		/* color = Color.BLACK;
 		enginePower = 125;
 		turboOn = false;
 		modelName = "Saab95";
-		stopEngine();
+		stopEngine(); */
 	}
 
 	public double getEnginePower() {

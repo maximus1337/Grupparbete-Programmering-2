@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Volvo740 {
+public class Volvo740 extends Car{
 
 	private final static double trimFactor = 1.25;
 
@@ -9,11 +9,16 @@ public class Volvo740 {
 	private Color color; // Color of the car
 	private String modelName; // The car model name
 
-	public Volvo740() {
+	public Volvo740(double ep, Color c, String mn) {
+		
+		super(ep, c, mn);
+		
+		/*
 		color = Color.RED;
 		enginePower = 100;
 		modelName = "Volvo740";
-		stopEngine();
+		stopEngine(); */
+		
 	}
 
 	public double getEnginePower() {
