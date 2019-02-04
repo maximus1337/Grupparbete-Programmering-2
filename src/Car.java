@@ -2,12 +2,11 @@ import javafx.scene.paint.Color;
 
 public class Car {
 
-	public double enginePower;
-	public double engineSpeed;
-	public Color color;
-	public String modelName;
-	public double currentSpeed;
-	public double trimFactor;
+	private double enginePower;
+	private Color color;
+	private String modelName;
+	private double currentSpeed;
+	private double trimFactor;
 	
 	public Car(double ep, Color c, String mn, double tf) {
 		
@@ -38,11 +37,11 @@ public class Car {
 		currentSpeed = 0;
 	}
 
-	public void incrementSpeed(double amount) {
+	private void incrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 	}
 
-	public void decrementSpeed(double amount) {
+	private void decrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 	
