@@ -11,6 +11,13 @@ public class Car implements Movable{
 	private int direction; // 1 = up, 2 = right, 3 = down, 4 = left
 	private int currentY, currentX;
 	
+	/**
+	 * Takes in an enginepower(double), a color(color), a modelname(string) and a trimfactor(dobule)
+	 * @param ep
+	 * @param c
+	 * @param mn
+	 * @param tf
+	 */
 	public Car(double ep, Color c, String mn, double tf) {
 		
 		this.enginePower = ep;
@@ -20,22 +27,40 @@ public class Car implements Movable{
 		
 	}
 	
+	/**
+	 * Returns the engine power
+	 * @return double
+	 */
 	public double getEnginePower() {
 		return enginePower;
 	}
 
+	/**
+	 * Returns the current speed
+	 * @return double
+	 */
 	public double getCurrentSpeed() {
 		return currentSpeed;
 	}
-
+	
+	/**
+	 * Returns the color
+	 * @return Color
+	 */
 	public Color getColor() {
 		return color;
 	}
-
+	
+	/**
+	 * Starts the engine
+	 */
 	public void startEngine() {
 		currentSpeed = 0.1;
 	}
-
+	
+	/**
+	 * Stops the engine
+	 */
 	public void stopEngine() {
 		currentSpeed = 0;
 	}
@@ -48,19 +73,33 @@ public class Car implements Movable{
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 	
+	/**
+	 * Increasing the speed
+	 * @param double
+	 */
 	public void gas(double amount) {
 		incrementSpeed(amount);
 	}
-
+	
+	/**
+	 * Decreasing the speed
+	 * @param double
+	 */
 	public void brake(double amount) {
 		decrementSpeed(amount);
 	}
-
+	
+	/**
+	 * Returns the speedfactor; enginePower * .01 * trimFactor
+	 * @return double
+	 */
 	public double speedFactor() {
 		return enginePower * 0.01 * trimFactor;
 	}
 
-	@Override
+	/**
+	 * Makes the vehicle move
+	 */
 	public void move() {
 		
 		if(direction == 1) { // up
@@ -89,14 +128,18 @@ public class Car implements Movable{
 		
 	}
 
-	@Override
+	/**
+	 * Makes the vehicle turn left
+	 */
 	public void turnLeft() {
 		
 		direction = 4;
 		
 	}
 
-	@Override
+	/**
+	 * Makes the vehicle turn right
+	 */
 	public void turnRight() {
 		
 		direction = 2;

@@ -10,6 +10,7 @@ public class main {
 		System.out.println(volvo.getEnginePower());
 		System.out.println(saab.getColor());
 		
+		
 	}
 	
 }
