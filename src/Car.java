@@ -1,12 +1,15 @@
 import javafx.scene.paint.Color;
 
-public class Car {
+public class Car implements Movable{
 
 	private double enginePower;
 	private Color color;
 	private String modelName;
 	private double currentSpeed;
 	private double trimFactor;
+	
+	private int direction; // 1 = up, 2 = right, 3 = down, 4 = left
+	private int currentY, currentX;
 	
 	public Car(double ep, Color c, String mn, double tf) {
 		
@@ -55,6 +58,49 @@ public class Car {
 
 	public double speedFactor() {
 		return enginePower * 0.01 * trimFactor;
+	}
+
+	@Override
+	public void move() {
+		
+		if(direction == 1) { // up
+			
+			currentY -= currentSpeed;
+			
+		}
+		
+		else if(direction == 2) { // right
+			
+			currentX += currentSpeed;
+			
+		}
+		
+		else if(direction == 3) { // down
+			
+			currentY += currentSpeed;
+			
+		}
+		
+		else if(direction == 4) { // left
+			
+			currentX -= currentSpeed;
+			
+		}
+		
+	}
+
+	@Override
+	public void turnLeft() {
+		
+		direction = 4;
+		
+	}
+
+	@Override
+	public void turnRight() {
+		
+		direction = 2;
+		
 	}
 	
 }
