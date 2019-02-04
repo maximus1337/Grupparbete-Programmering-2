@@ -6,9 +6,8 @@ public class main {
 		
 		Volvo740 volvo = new Volvo740(100, Color.BLACK, "Volvo", 1.25);
 		Saab95 saab = new Saab95(100, Color.WHITE, "Volvo", 1.12);
-		
-		System.out.println(volvo.getEnginePower());
-		System.out.println(saab.getColor());
+		VolvoS60 volvos60 = new VolvoS60(175, Color.ORANGE, "Volvo S60", 1.05);
+		ToyotaYaris toyota = new ToyotaYaris(75, Color.GREY, "Toyota Yaris", 1.4);
 		
 		
 	}

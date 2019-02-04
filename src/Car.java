@@ -10,6 +10,7 @@ public class Car implements Movable{
 	
 	private int direction; // 1 = up, 2 = right, 3 = down, 4 = left
 	private int currentY, currentX;
+	private double currentSpeedTemp = currentSpeed;
 	
 	/**
 	 * Takes in an enginepower(double), a color(color), a modelname(string) and a trimfactor(dobule)
@@ -74,19 +75,46 @@ public class Car implements Movable{
 	}
 	
 	/**
-	 * Increasing the speed
-	 * @param double
+	 * Increasing the speed. The speed can't be slowed down.
+	 * @param double [0,1]
 	 */
 	public void gas(double amount) {
+		currentSpeedTemp = currentSpeed;
+		if(amount > 1 || amount < 0) {
+			return;
+		}
+		
 		incrementSpeed(amount);
+		
+		if(currentSpeed > enginePower) {
+			currentSpeed = enginePower;
+		}
+		
+		if(currentSpeed < currentSpeedTemp) {
+			currentSpeed = currentSpeedTemp;
+		}
+		
+		
 	}
 	
 	/**
-	 * Decreasing the speed
-	 * @param double
+	 * Decreasing the speed. The speed can't get sped up.
+	 * @param double [0,1]
 	 */
 	public void brake(double amount) {
+		currentSpeedTemp = currentSpeed; 
+		if(amount > 1 || amount < 0) {			
+			return;			
+		}
+		
 		decrementSpeed(amount);
+		
+		if(currentSpeedTemp > currentSpeed) {
+			
+			currentSpeed = currentSpeedTemp;
+			
+		}
+		
 	}
 	
 	/**
