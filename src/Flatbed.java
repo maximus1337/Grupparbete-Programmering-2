@@ -53,7 +53,7 @@ public class Flatbed{
 	 * @param double angle
 	 * @return boolean
 	 */
-	public boolean checkAngle(double angle) {
+	private boolean checkAngle(double angle) {
 		
 		if(angle < 0) {
 			return false;

@@ -174,4 +174,44 @@ public class Car implements Movable{
 		
 	}
 	
+	/**
+	 * Returns the current x-coordinate of the car
+	 * @return int currentX
+	 */
+	public int getCurrentX() {
+		
+		return currentX;
+		
+	}
+	
+	/**
+	 * Returns the current y-coordinate of the car
+	 * @return int currentY
+	 */
+	public int getCurrentY() {
+		
+		return currentY;
+		
+	}
+	
+	/**
+	 * Change the x position of the car
+	 * @param int x
+	 */
+	public void setCurrentX(int x) {
+		
+		currentX = x;
+		
+	}
+	
+	/**
+	 * Changes the y position of th ecar
+	 * @param int y
+	 */
+	public void setCurrentY(int y) {
+		
+		currentY = y;
+		
+	}
+	
 }

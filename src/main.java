@@ -9,10 +9,10 @@ public class main {
 		VolvoS60 volvos60 = new VolvoS60(175, Color.ORANGE, "Volvo S60", 1.05);
 		ToyotaYaris toyota = new ToyotaYaris(75, Color.GREY, "Toyota Yaris", 1.4);
 		Scania s = new Scania(250, Color.BLUE, "Scania", 1.1);
+		Transport t = new Transport(250, Color.BLACK, "Transport vehicle", 1.1);
 		
-		s.liftUp(60);
-		s.liftDown(80);
-		System.out.println(s.getAngle());
+		t.liftDown();
+		System.out.println(t.isLiftUp());
 		
 	}
 	
