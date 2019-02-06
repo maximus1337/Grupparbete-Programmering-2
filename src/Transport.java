@@ -75,6 +75,17 @@ public class Transport extends Car{
 		
 	}
 	
+	/**
+	 * Return the car in the index x
+	 * @param int x
+	 * @return Car
+	 */
+	public Car getCar(int x) {
+		
+		return tt.getCar(x);
+		
+	}
+	
 }
 
 

@@ -12,7 +12,9 @@ public class main {
 		Transport t = new Transport(250, Color.BLACK, "Transport vehicle", 1.1);
 		
 		t.liftDown();
-		System.out.println(t.isLiftUp());
+		t.liftUp();
+		t.addCar(volvo);
+		System.out.println(t.getCar(0));
 		
 	}
 	
