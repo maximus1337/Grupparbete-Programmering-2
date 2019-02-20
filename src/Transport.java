@@ -43,18 +43,38 @@ public class Transport extends Car{
 	 * @param Car c
 	 */
 	public void addCar(Car c) {
-		
-		if(c.getCurrentX() <= 10 || c.getCurrentY() <= 10) {
+	
+		if(!tt.isLiftUp() && checkDistance(c,tt) < 10){
+			
 			c.setCurrentX(this.currentX);
 			c.setCurrentY(this.currentY);
 			tt.addCar(c);
+			
 		}
+		
 		else {
+			
 			return;
+			
 		}
 		
 	}
 	
+	/**
+	 * Return the distance between a car and a transporttrailer.
+	 * @param Car
+	 * @param Transporttrailer
+	 * @return int
+	 */
+	private int checkDistance(Car c, Transporttrailer tt2) {
+		
+		int diffX = (int) Math.sqrt((c.getCurrentX() - this.getCurrentX()));
+		int diffY = (int) Math.sqrt((c.getCurrentY() - this.getCurrentY()));
+		int hypotenuse =  (int) Math.sqrt(diffX + diffY);
+		return hypotenuse;
+		
+	}
+
 	/**
 	 * Removes the car from the trailer.
 	 * @param c
