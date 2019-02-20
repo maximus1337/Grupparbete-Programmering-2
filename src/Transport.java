@@ -44,7 +44,7 @@ public class Transport extends Car{
 	 */
 	public void addCar(Car c) {
 	
-		if(!tt.isLiftUp() && checkDistance(c,tt) < 10){
+		if(!tt.isLiftUp() && checkDistance(c,this) < 10){
 			
 			c.setCurrentX(this.currentX);
 			c.setCurrentY(this.currentY);
@@ -66,10 +66,10 @@ public class Transport extends Car{
 	 * @param Transporttrailer
 	 * @return int
 	 */
-	private int checkDistance(Car c, Transporttrailer tt2) {
+	private int checkDistance(Car c, Transport t) {
 		
-		int diffX = (int) Math.sqrt((c.getCurrentX() - this.getCurrentX()));
-		int diffY = (int) Math.sqrt((c.getCurrentY() - this.getCurrentY()));
+		int diffX = (int) Math.pow((c.getCurrentX() - this.getCurrentX()),2);
+		int diffY = (int) Math.pow((c.getCurrentY() - this.getCurrentY()),2);
 		int hypotenuse =  (int) Math.sqrt(diffX + diffY);
 		return hypotenuse;
 		
