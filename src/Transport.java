@@ -81,7 +81,7 @@ public class Transport extends Car{
 	 */
 	public void removeCar(Car c) {
 		
-		tt.removeCar(c);
+		tt.removeCar();
 		
 	}
 	

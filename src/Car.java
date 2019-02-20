@@ -94,7 +94,6 @@ public class Car implements Movable{
 			currentSpeed = currentSpeedTemp;
 		}
 		
-		
 	}
 	
 	/**
