@@ -1,3 +1,4 @@
+
 import javafx.scene.paint.Color;
 
 public class Car implements Movable{
@@ -9,7 +10,7 @@ public class Car implements Movable{
 	private double trimFactor;
 	
 	private int direction; // 1 = up, 2 = right, 3 = down, 4 = left
-	private int currentY, currentX;
+	private double currentY, currentX;
 	private double currentSpeedTemp = currentSpeed;
 	
 	/**
@@ -79,6 +80,7 @@ public class Car implements Movable{
 	 * @param double [0,1]
 	 */
 	public void gas(double amount) {
+		
 		currentSpeedTemp = currentSpeed;
 		if(amount > 1 || amount < 0) {
 			return;
@@ -177,7 +179,7 @@ public class Car implements Movable{
 	 * Returns the current x-coordinate of the car
 	 * @return int currentX
 	 */
-	public int getCurrentX() {
+	public double getCurrentX() {
 		
 		return currentX;
 		
@@ -187,7 +189,7 @@ public class Car implements Movable{
 	 * Returns the current y-coordinate of the car
 	 * @return int currentY
 	 */
-	public int getCurrentY() {
+	public double getCurrentY() {
 		
 		return currentY;
 		
