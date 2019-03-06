@@ -11,16 +11,4 @@ public class Boat extends Car{
 		tt = new Transporttrailer();
 	}
 	
-	public void addCar(Car c) {
-		
-		tt.addCar(c);
-		
-	}
-	
-	public void removeCar(Car c) {
-		
-		
-		
-	}
-	
 }

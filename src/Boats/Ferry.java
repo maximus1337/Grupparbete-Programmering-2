@@ -14,19 +14,25 @@ public class Ferry extends Boat{
 	
 	public void addCar(Car c) {
 		
-		tt.addCar(c);
+		tt.cars.add(c);
 		
 	}
 	
 	public void removeCar() {
 		
-		tt.cars.remove(tt.getCarsSize());
+		tt.cars.remove(tt.getCarsSize()-1);
 		
 	}
 	
 	public Car getCar(int x) {
 		
 		return tt.getCar(x);
+		
+	}
+	
+	public String getCars() {
+		
+		return tt.cars.toString();
 		
 	}
 	

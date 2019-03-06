@@ -6,7 +6,6 @@ public class Transporttrailer {
 	private int lift = 0; // 0 = lift it down, 1 = list is up
 	
 	public ArrayList<Car> cars = new ArrayList<Car>();
-	private int carsTail = cars.size();
 	
 	public Transporttrailer() {
 		
@@ -56,6 +55,7 @@ public class Transporttrailer {
 		}
 		else {
 			cars.add(c);
+		
 		}
 		
 	}
@@ -82,7 +82,7 @@ public class Transporttrailer {
 	 */
 	public Car getCar(int x) {
 		
-		if(x > carsTail) {
+		if(x > cars.size()) {
 			
 			return null;
 			
@@ -98,7 +98,7 @@ public class Transporttrailer {
 	
 	public int getCarsSize() {
 		
-		return carsTail;
+		return cars.size();
 		
 	}
 	
