@@ -104,7 +104,7 @@ public class Vehicle implements Movable{
 		
 		decrementSpeed(amount);
 		
-		if(currentSpeedTemp > currentSpeed) {
+		if(currentSpeedTemp < currentSpeed) {
 			
 			currentSpeed = currentSpeedTemp;
 			

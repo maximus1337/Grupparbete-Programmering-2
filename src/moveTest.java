@@ -13,7 +13,11 @@ public class moveTest {
 	public void gasAndBrakeTest() {
 		assertEquals(0, volvo.getCurrentSpeed(), 0);
 		volvo.gas(1);
-		assertEquals(1.25, volvo.getCurrentSpeed(), 0);
+		volvo.brake(0.5);
+		assertEquals(.625, volvo.getCurrentSpeed(), 0);
+		volvo.brake(.5);
+		volvo.gas(1);
+		
 	}
 
 	@BeforeEach
