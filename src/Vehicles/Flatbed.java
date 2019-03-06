@@ -1,3 +1,4 @@
+package Vehicles;
 public class Flatbed{
 	
 	double currentAngle = 0;

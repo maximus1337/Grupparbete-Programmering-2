@@ -1,7 +1,8 @@
+package Vehicles;
 
 import javafx.scene.paint.Color;
 
-public class Car implements Movable{
+public class Vehicle implements Movable{
 
 	private double enginePower;
 	private Color color;
@@ -13,14 +14,7 @@ public class Car implements Movable{
 	private double currentY, currentX;
 	private double currentSpeedTemp = currentSpeed;
 	
-	/**
-	 * Takes in an enginepower(double), a color(color), a modelname(string) and a trimfactor(dobule)
-	 * @param ep
-	 * @param c
-	 * @param mn
-	 * @param tf
-	 */
-	public Car(double ep, Color c, String mn, double tf) {
+	public Vehicle(double ep, Color c, String mn, double tf) {
 		
 		this.enginePower = ep;
 		this.color = c;

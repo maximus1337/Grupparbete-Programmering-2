@@ -1,3 +1,7 @@
+package Boats;
+import Vehicles.Boat;
+import Vehicles.Car;
+import Vehicles.Transporttrailer;
 import javafx.scene.paint.Color;
 
 public class Ferry extends Boat{
@@ -17,6 +21,12 @@ public class Ferry extends Boat{
 	public void removeCar() {
 		
 		tt.cars.remove(tt.getCarsSize());
+		
+	}
+	
+	public Car getCar(int x) {
+		
+		return tt.getCar(x);
 		
 	}
 	

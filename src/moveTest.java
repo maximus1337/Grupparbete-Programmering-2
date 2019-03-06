@@ -3,6 +3,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
+import Cars.Volvo740;
+
 public class moveTest {
 
 	Volvo740 volvo = new Volvo740(100, null, null, 1.25);

@@ -1,3 +1,5 @@
+package Cars;
+import Vehicles.Car;
 import javafx.scene.paint.Color;
 
 public class Volvo740 extends Car{

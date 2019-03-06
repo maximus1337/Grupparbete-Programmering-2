@@ -1,3 +1,6 @@
+package Cars;
+import Vehicles.Car;
+import Vehicles.Flatbed;
 import javafx.scene.paint.Color;
 
 public class Scania extends Car{

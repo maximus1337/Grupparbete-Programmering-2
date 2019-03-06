@@ -1,24 +1,18 @@
+import Boats.Ferry;
+import Cars.Volvo740;
+import Vehicles.Transport;
 import javafx.scene.paint.Color;
 
 public class main {
 
 	public static void main(String[] args) {
 		
-		Transport t = new Transport(0, null, null, 0);
+		Ferry f = new Ferry(100, Color.BLACK, "Ferry");
+		Volvo740 volvo = new Volvo740(100,Color.BLACK, "740", 1.1);
 		
-		Volvo740 v = new Volvo740(100, null, null, 1.25);
-		v.setCurrentX(0);
-		v.setCurrentY(0);
+		f.addCar(volvo);
 		
-		v.gas(1);
-		v.turnRight();
-		v.move();
-		v.move();
-		v.move();
-		v.move();
-		v.turnLeft();
-		
-		System.out.println(v.getCurrentX());
+		System.out.println(f.getCar(0));
 		
 	}
 	
