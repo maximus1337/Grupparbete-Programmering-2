@@ -9,7 +9,7 @@ public class Scania extends Car{
 	
 	public Scania(double ep, Color c, String mn, double tf) {
 		
-		super(250, Color.BLUE, "Scania", 1.1);
+		super(450, Color.BLUE, "Scania", 1.1);
 		
 	}
 	
@@ -50,6 +50,17 @@ public class Scania extends Car{
 	public double getAngle() {
 		
 		return f.getCurrentAngle();
+		
+	}
+	
+	public void gas(double amount) {
+		
+		if(amount > 1 || amount < 0 || this.getAngle() > 0) {
+			return;
+		}
+		else {
+			super.gas(amount);
+		}
 		
 	}
 	

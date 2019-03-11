@@ -1,8 +1,8 @@
 package Vehicles;
 public class Flatbed{
 	
-	double currentAngle = 0;
-	double currentAngleTemp;
+	private double currentAngle = 0;
+	private double currentAngleTemp;
 		
 	/**
 	 * Lifts up the flatbed with the given double. Check so the current angle won't be bigger than 70 och less than 0.
@@ -12,11 +12,16 @@ public class Flatbed{
 		
 		currentAngleTemp = currentAngle + angle;
 		
-		if(checkAngle(currentAngleTemp)) {
-			currentAngle += angle;
+		if(currentAngleTemp > 70) {
+			currentAngle = 70;
 		}
+		
+		else if(currentAngleTemp < 0){
+			currentAngle = 0;			
+		}
+		
 		else {
-			currentAngle = currentAngle;
+			currentAngle += angle;
 		}
 		
 	}
@@ -29,11 +34,14 @@ public class Flatbed{
 		
 		currentAngleTemp = currentAngle - angle;
 		
-		if(checkAngle(currentAngleTemp)) {
-			currentAngle -= angle;	
+		if(currentAngleTemp < 0) {
+			currentAngle = 0;	
+		}
+		else if(currentAngleTemp > 70){
+			currentAngle = 70;
 		}
 		else {
-			currentAngle = currentAngle;
+			currentAngle -= angle;
 		}
 		
 		
@@ -46,25 +54,6 @@ public class Flatbed{
 	public double getCurrentAngle() {
 		
 		return currentAngle;
-		
-	}
-	
-	/**
-	 * Checking if the given angle is less than 0 or bigger than 70. If it's bigger than 70 or less than 0, it returns false. Else it returns true.
-	 * @param double angle
-	 * @return boolean
-	 */
-	private boolean checkAngle(double angle) {
-		
-		if(angle < 0) {
-			return false;
-		}
-		else if(angle > 70) {
-			return false;
-		}
-		else {
-			return true;
-		}
 		
 	}
 		

@@ -1,5 +1,6 @@
 import Boats.Ferry;
 import Cars.Saab95;
+import Cars.Scania;
 import Cars.ToyotaYaris;
 import Cars.Volvo740;
 import Vehicles.Transport;
@@ -10,24 +11,22 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		Ferry f = new Ferry(100, Color.BLACK, "Ferry");
+		Transport t = new Transport(400,Color.BLACK,"Transport",1.25);
+		Ferry f = new Ferry(20000,Color.ORANGE,"Ferry");
 		
-		Volvo740 volvo = new Volvo740(100,Color.BLACK, "740", 1.25);
-		Saab95 volvo1 = new Saab95(100,Color.BLACK, "740", 1.1);
-		ToyotaYaris volvo2 = new ToyotaYaris(100,Color.BLACK, "740", 1.1);
-		Volvo740 volvo3 = new Volvo740(100,Color.BLACK, "740", 1.1);
+		Volvo740 v = new Volvo740(400,Color.BLACK, "Volo",1.1);
+		Saab95 s = new Saab95(300,Color.BLACK,"Saab",1.1);
 		
-		volvo.gas(1);
-		volvo.gas(1);
-		volvo.gas(1);
-		volvo.gas(1);
-		volvo.brake(.5);
-		volvo.brake(.5);
-		volvo.brake(.5);
-		volvo.brake(.5);
+		t.addCar(v);
+		t.addCar(s);
 		
+		f.addCar(v);
+		f.addCar(s);
 		
-		System.out.println(volvo.getCurrentSpeed());
+		f.removeCar();
+		
+		System.out.println(f.getCars());
+		
 		
 	}
 	

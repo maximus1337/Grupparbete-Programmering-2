@@ -80,9 +80,9 @@ public class Transport extends Car{
 	 * Removes the car from the trailer.
 	 * @param c
 	 */
-	public void removeCar(Car c) {
+	public void removeCar() {
 		
-		tt.removeCar();
+		tt.cars.remove(0);
 		
 	}
 	
@@ -108,13 +108,3 @@ public class Transport extends Car{
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-

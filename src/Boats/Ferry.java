@@ -20,7 +20,7 @@ public class Ferry extends Boat{
 	
 	public void removeCar() {
 		
-		tt.cars.remove(tt.getCarsSize()-1);
+		tt.cars.remove(0);
 		
 	}
 	

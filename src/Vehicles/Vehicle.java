@@ -117,7 +117,7 @@ public class Vehicle implements Movable{
 	 * @return double
 	 */
 	public double speedFactor() {
-		return enginePower * 0.01 * trimFactor;
+		return enginePower * 0.01;
 	}
 
 	/**

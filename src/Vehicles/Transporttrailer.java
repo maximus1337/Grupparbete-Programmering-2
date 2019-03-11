@@ -67,7 +67,7 @@ public class Transporttrailer {
 	public void removeCar() {
 		
 		if(lift == 0) {
-			cars.remove(0);
+			cars.remove(cars.size()-1);
 		}
 		else {
 			return;
