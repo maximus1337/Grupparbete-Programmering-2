@@ -17,17 +17,6 @@ public class main {
 		Volvo740 v = new Volvo740(400,Color.BLACK, "Volo");
 		Saab95 s = new Saab95(300,Color.BLACK,"Saab");
 		
-		t.addCar(v);
-		t.addCar(s);
-		
-		f.addCar(v);
-		f.addCar(s);
-		
-		f.removeCar();
-		
-		System.out.println(f.getCars());
-		
-		
 	}
 	
 }

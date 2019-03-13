@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 public class Ferry extends Boat{
 	
 	Transporttrailer tt = new Transporttrailer();
+	private static final double trimFactor = 1;
 	
 	public Ferry(double ep, Color c, String mn) {
 		super(ep, c, mn);
@@ -34,6 +35,11 @@ public class Ferry extends Boat{
 		
 		return tt.cars.toString();
 		
+	}
+
+	@Override
+	public double speedFactor() {
+		return enginePower * 0.0000001 * trimFactor;
 	}
 	
 }
