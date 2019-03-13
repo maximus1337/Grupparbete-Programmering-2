@@ -11,9 +11,10 @@ public class moveTest {
 
 	@Test
 	public void gasAndBrakeTest() {
-		
+		 
 		assertEquals(0, volvo.getCurrentSpeed(), 0);
 		volvo.gas(1);
+		assertEquals(1.2, volvo.getCurrentSpeed(),0);
 		volvo.brake(0.5);
 		assertEquals(.6, volvo.getCurrentSpeed(), 0);
 		
@@ -24,6 +25,26 @@ public class moveTest {
 		volvo.stopEngine();
 		volvo.setCurrentY(0);
 		volvo.setCurrentX(0);
+	}
+	
+	@Test
+	public void moveTest() {
+		
+		volvo.gas(1);
+		volvo.move();
+		assertEquals(1.2, volvo.getCurrentX(), 0);
+		volvo.turnLeft();
+		volvo.move();
+		assertEquals(0, volvo.getCurrentX(), 0);
+		volvo.move();
+		assertEquals(-1.2, volvo.getCurrentX(), 0);
+		
+	}
+	
+	@Test
+	public void testMaxSpeed() {
+		
+		
 	}
 	
 	

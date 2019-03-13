@@ -18,8 +18,12 @@ public class main {
 		Saab95 s = new Saab95(300,Color.BLACK,"Saab");
 		
 		v.gas(1);
+		v.turnLeft();
+		v.move();
+		v.move();
+		v.move();
 		
-		System.out.println(v.getCurrentSpeed());
+		System.out.println(v.getCurrentX());
 		
 	}
 	

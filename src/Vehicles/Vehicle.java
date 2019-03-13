@@ -10,7 +10,7 @@ public abstract class Vehicle implements Movable{
 	private double currentSpeed;
 	private double trimFactor;
 	
-	private int direction; // 1 = up, 2 = right, 3 = down, 4 = left
+	private int direction = 2; // 1 = up, 2 = right, 3 = down, 4 = left
 	private double currentY, currentX;
 	private double currentSpeedTemp = currentSpeed;
 	
@@ -121,25 +121,25 @@ public abstract class Vehicle implements Movable{
 		
 		if(direction == 1) { // up
 			
-			currentY -= currentSpeed;
+			this.currentY -= this.currentSpeed;
 			
 		}
 		
 		else if(direction == 2) { // right
 			
-			currentX += currentSpeed;
+			this.currentX += this.currentSpeed;
 			
 		}
 		
 		else if(direction == 3) { // down
 			
-			currentY += currentSpeed;
+			this.currentY += this.currentSpeed;
 			
 		}
 		
 		else if(direction == 4) { // left
 			
-			currentX -= currentSpeed;
+			this.currentX -= this.currentSpeed;
 			
 		}
 		
