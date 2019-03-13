@@ -67,7 +67,7 @@ public class Scania extends Car{
 
 	@Override
 	public double speedFactor() {
-		return enginePower * .001 * trimFactor;
+		return getEnginePower() * .001 * trimFactor;
 	}
 	
 }

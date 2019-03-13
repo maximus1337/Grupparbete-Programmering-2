@@ -4,7 +4,7 @@ import javafx.scene.paint.Color;
 
 public abstract class Vehicle implements Movable{
 
-	public double enginePower;
+	private double enginePower;
 	private Color color;
 	private String modelName;
 	private double currentSpeed;

@@ -110,7 +110,7 @@ public class Transport extends Car{
 
 	@Override
 	public double speedFactor() {
-		return enginePower * .01 * trimFactor;
+		return getEnginePower() * .01 * trimFactor;
 	}
 	
 }

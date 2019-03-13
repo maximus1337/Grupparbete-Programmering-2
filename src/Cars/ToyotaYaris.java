@@ -14,7 +14,7 @@ public class ToyotaYaris extends Car{
 	@Override
 	public double speedFactor() {
 		// TODO Auto-generated method stub
-		return enginePower * 0.1 * trimFactor;
+		return getEnginePower() * 0.1 * trimFactor;
 	}
 
 }

@@ -15,7 +15,7 @@ public class Volvo740 extends Car{
 	@Override
 	public double speedFactor() {
 		// TODO Auto-generated method stub
-		return enginePower * .01 * trimFactor;
+		return getEnginePower() * .01 * trimFactor;
 	}
 
 }

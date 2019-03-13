@@ -39,7 +39,7 @@ public class Ferry extends Boat{
 
 	@Override
 	public double speedFactor() {
-		return enginePower * 0.0000001 * trimFactor;
+		return getEnginePower() * 0.00001 * trimFactor;
 	}
 	
 }

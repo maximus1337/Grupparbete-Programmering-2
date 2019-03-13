@@ -14,8 +14,12 @@ public class main {
 		Transport t = new Transport(400,Color.BLACK,"Transport");
 		Ferry f = new Ferry(20000,Color.ORANGE,"Ferry");
 		
-		Volvo740 v = new Volvo740(400,Color.BLACK, "Volo");
+		Volvo740 v = new Volvo740(100,Color.BLACK, "Volo");
 		Saab95 s = new Saab95(300,Color.BLACK,"Saab");
+		
+		v.gas(1);
+		
+		System.out.println(v.getCurrentSpeed());
 		
 	}
 	
