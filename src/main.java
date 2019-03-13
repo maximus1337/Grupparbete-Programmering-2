@@ -11,19 +11,14 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		Transport t = new Transport(400,Color.BLACK,"Transport");
+		Transport t = new Transport(100,Color.BLACK,"Transport");
 		Ferry f = new Ferry(20000,Color.ORANGE,"Ferry");
+		Scania sc = new Scania(100,null, null);
 		
 		Volvo740 v = new Volvo740(100,Color.BLACK, "Volo");
 		Saab95 s = new Saab95(300,Color.BLACK,"Saab");
 		
-		v.gas(1);
-		v.turnLeft();
-		v.move();
-		v.move();
-		v.move();
 		
-		System.out.println(v.getCurrentX());
 		
 	}
 	

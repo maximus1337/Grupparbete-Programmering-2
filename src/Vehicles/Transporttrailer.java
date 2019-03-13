@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Transporttrailer {
 	
-	private int lift = 0; // 0 = lift it down, 1 = list is up
+	private int lift = 0; // 0 = lift is down, 1 = list is up
 	
 	public ArrayList<Car> cars = new ArrayList<Car>();
 	

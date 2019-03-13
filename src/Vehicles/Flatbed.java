@@ -1,8 +1,8 @@
 package Vehicles;
+
 public class Flatbed{
 	
 	private double currentAngle = 0;
-	private double currentAngleTemp;
 		
 	/**
 	 * Lifts up the flatbed with the given double. Check so the current angle won't be bigger than 70 och less than 0.
@@ -10,13 +10,11 @@ public class Flatbed{
 	 */
 	public void liftUp(double angle) {
 		
-		currentAngleTemp = currentAngle + angle;
-		
-		if(currentAngleTemp > 70) {
+		if(angle >= 70) {
 			currentAngle = 70;
 		}
 		
-		else if(currentAngleTemp < 0){
+		else if(angle <= 0){
 			currentAngle = 0;			
 		}
 		
@@ -32,14 +30,13 @@ public class Flatbed{
 	 */
 	public void liftDown(double angle) {
 		
-		currentAngleTemp = currentAngle - angle;
-		
-		if(currentAngleTemp < 0) {
+		if(angle <= 0) {
 			currentAngle = 0;	
 		}
-		else if(currentAngleTemp > 70){
+		else if(angle >= 70){
 			currentAngle = 70;
 		}
+		
 		else {
 			currentAngle -= angle;
 		}
