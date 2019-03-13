@@ -6,9 +6,10 @@ public class Transport extends Car{
 	Transporttrailer tt = new Transporttrailer();
 	
 	private int currentX, currentY;
+	private static final double trimFactor = 1.1;
 	
-	public Transport(double ep, Color c, String mn, double tf) {
-		super(ep, c, mn, tf);
+	public Transport(double ep, Color c, String mn) {
+		super(ep, c, mn);
 	}
 	
 	/**
@@ -105,6 +106,11 @@ public class Transport extends Car{
 		
 		return tt.getCar(x);
 		
+	}
+
+	@Override
+	public double speedFactor() {
+		return enginePower * .01 * trimFactor;
 	}
 	
 }

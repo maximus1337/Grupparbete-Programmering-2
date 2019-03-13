@@ -2,7 +2,7 @@ package Vehicles;
 
 import javafx.scene.paint.Color;
 
-public class Car extends Vehicle{
+public abstract class Car extends Vehicle{
 
 	/**
 	 * Takes in an enginepower(double), a color(color), a modelname(string) and a trimfactor(dobule)
@@ -11,9 +11,9 @@ public class Car extends Vehicle{
 	 * @param mn
 	 * @param tf
 	 */
-	public Car(double ep, Color c, String mn, double tf) {
+	public Car(double ep, Color c, String mn) {
 		
-		super(ep,c,mn,tf);
+		super(ep,c,mn);
 		
 	}
 	

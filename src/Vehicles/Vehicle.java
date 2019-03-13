@@ -2,9 +2,9 @@ package Vehicles;
 
 import javafx.scene.paint.Color;
 
-public class Vehicle implements Movable{
+public abstract class Vehicle implements Movable{
 
-	private double enginePower;
+	public double enginePower;
 	private Color color;
 	private String modelName;
 	private double currentSpeed;
@@ -14,12 +14,11 @@ public class Vehicle implements Movable{
 	private double currentY, currentX;
 	private double currentSpeedTemp = currentSpeed;
 	
-	public Vehicle(double ep, Color c, String mn, double tf) {
+	public Vehicle(double ep, Color c, String mn) {
 		
 		this.enginePower = ep;
 		this.color = c;
 		this.modelName = mn;
-		this.trimFactor = tf;
 		
 	}
 	
@@ -112,13 +111,8 @@ public class Vehicle implements Movable{
 		
 	}
 	
-	/**
-	 * Returns the speedfactor; enginePower * .01 * trimFactor
-	 * @return double
-	 */
-	public double speedFactor() {
-		return enginePower * 0.01;
-	}
+
+	public abstract double speedFactor();
 
 	/**
 	 * Makes the vehicle move

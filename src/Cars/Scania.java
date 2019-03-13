@@ -6,10 +6,11 @@ import javafx.scene.paint.Color;
 public class Scania extends Car{
 	
 	Flatbed f = new Flatbed();
+	private static final double trimFactor = 1.1;
 	
-	public Scania(double ep, Color c, String mn, double tf) {
+	public Scania(double ep, Color c, String mn) {
 		
-		super(450, Color.BLUE, "Scania", 1.1);
+		super(450, Color.BLUE, "Scania");
 		
 	}
 	
@@ -62,6 +63,11 @@ public class Scania extends Car{
 			super.gas(amount);
 		}
 		
+	}
+
+	@Override
+	public double speedFactor() {
+		return enginePower * .001 * trimFactor;
 	}
 	
 }

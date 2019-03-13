@@ -7,7 +7,7 @@ import Cars.Volvo740;
 
 public class moveTest {
 
-	Volvo740 volvo = new Volvo740(100, null, null, 1.25);
+	Volvo740 volvo = new Volvo740(100, null, null);
 
 	@Test
 	public void gasAndBrakeTest() {
