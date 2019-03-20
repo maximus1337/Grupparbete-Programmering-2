@@ -1,5 +1,4 @@
-package Cars;
-import Vehicles.Car;
+package model;
 import javafx.scene.paint.Color;
 
 public class ToyotaYaris extends Car{

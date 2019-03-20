@@ -1,12 +1,13 @@
+package tests;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import Cars.Saab95;
-import Cars.Scania;
-import Cars.Volvo740;
-import Vehicles.Transport;
+import model.Saab95;
+import model.Scania;
+import model.Transport;
+import model.Volvo740;
 
 public class testing {
 

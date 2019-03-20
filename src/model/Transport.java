@@ -1,4 +1,4 @@
-package Vehicles;
+package model;
 import javafx.scene.paint.Color;
 
 public class Transport extends Car{

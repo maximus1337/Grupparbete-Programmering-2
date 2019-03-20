@@ -1,11 +1,11 @@
-import Boats.Ferry;
-import Cars.Saab95;
-import Cars.Scania;
-import Cars.ToyotaYaris;
-import Cars.Volvo740;
-import Vehicles.Transport;
-import Vehicles.Vehicle;
 import javafx.scene.paint.Color;
+import model.Ferry;
+import model.Saab95;
+import model.Scania;
+import model.ToyotaYaris;
+import model.Transport;
+import model.Vehicle;
+import model.Volvo740;
 
 public class main {
 

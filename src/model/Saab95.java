@@ -1,6 +1,5 @@
-package Cars;
+package model;
 
-import Vehicles.Car;
 import javafx.scene.paint.Color;
 
 public class Saab95 extends Car{

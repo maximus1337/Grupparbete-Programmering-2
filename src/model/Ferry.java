@@ -1,7 +1,4 @@
-package Boats;
-import Vehicles.Boat;
-import Vehicles.Car;
-import Vehicles.Transporttrailer;
+package model;
 import javafx.scene.paint.Color;
 
 public class Ferry extends Boat{

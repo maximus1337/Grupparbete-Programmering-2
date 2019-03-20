@@ -1,4 +1,4 @@
-package Vehicles;
+package model;
 
 public interface Movable {
 	
