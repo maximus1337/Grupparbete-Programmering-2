@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.Saab95;
+import model.Scania;
 import model.Vehicle;
 import model.Volvo740;
 import view.ButtonBox;
@@ -24,15 +26,21 @@ public class App extends Application {
 		CarController cc = new CarController(cp);
 
 		Vehicle model = new Volvo740(175, Color.BLACK, "Volvo");
+		Vehicle scania = new Scania(500, Color.BLACK, "Scania");
+		Vehicle saab = new Saab95(100, Color.GREEN, "Saab");
+		
 		cc.setModel(model);
-
+		
+		scania.setCurrentY(100);
+		saab.setCurrentY(200);
+		
 		ButtonBox cbp = new ButtonBox(cc);
 
 		BorderPane root = new BorderPane();
 
 		root.setTop(cp);
 		root.setBottom(cbp);
-
+		
 		Scene scene = new Scene(root, WIDTH, HEIGHT, Color.SKYBLUE);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Car Simulator");
