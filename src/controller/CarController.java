@@ -18,7 +18,17 @@ public class CarController {
 					cp.move(model.getCurrentX(), model.getCurrentY());
 					cp.update();
 				}
+				
+				if(model.getCurrentX() + 100 > 1200) {
+					model.turnLeft();
+				}
+			
+				if(model.getCurrentX() < 0 ) {
+					model.turnRight();
+				}
+				
 			}
+			
 		};
 		at.start();
 	}
