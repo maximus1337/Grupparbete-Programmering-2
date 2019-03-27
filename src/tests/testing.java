@@ -24,6 +24,12 @@ public class testing {
 		assertEquals(1.2, volvo.getCurrentSpeed(),0);
 		volvo.brake(0.5);
 		assertEquals(.6, volvo.getCurrentSpeed(), 0);
+		volvo.stopEngine();
+		assertEquals(0, volvo.getCurrentSpeed(),0);
+		volvo.brake(1);
+		assertEquals(0, volvo.getCurrentSpeed(),0);
+		volvo.gas(1);
+		assertEquals(1.2, volvo.getCurrentSpeed(),0);
 		
 	}
 

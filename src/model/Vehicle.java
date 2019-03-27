@@ -74,20 +74,18 @@ public abstract class Vehicle implements Movable{
 	 */
 	public void gas(double amount) {
 		
-		currentSpeedTemp = currentSpeed;
+		
 		if(amount > 1 || amount < 0) {
 			return;
 		}
 		
 		incrementSpeed(amount);
 		
-		if(currentSpeed > enginePower) {
-			currentSpeed = enginePower;
+		if(this.currentSpeed > this.enginePower) {
+			this.currentSpeed = this.enginePower;
 		}
 		
-		if(currentSpeed < currentSpeedTemp) {
-			currentSpeed = currentSpeedTemp;
-		}
+		
 		
 	}
 	
@@ -96,16 +94,16 @@ public abstract class Vehicle implements Movable{
 	 * @param double [0,1]
 	 */
 	public void brake(double amount) {
-		currentSpeedTemp = currentSpeed; 
+		
 		if(amount > 1 || amount < 0) {			
 			return;			
 		}
 		
 		decrementSpeed(amount);
 		
-		if(currentSpeedTemp < currentSpeed) {
+		if(this.currentSpeed < 0) {
 			
-			currentSpeed = currentSpeedTemp;
+			this.currentSpeed = 0;
 			
 		}
 		
