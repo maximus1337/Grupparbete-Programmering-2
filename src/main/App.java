@@ -25,11 +25,14 @@ public class App extends Application {
 
 		CarController cc = new CarController(cp);
 
-		Vehicle model = new Volvo740(175, Color.BLACK, "Volvo");
+		Vehicle volvo = new Volvo740(175, Color.BLACK, "Volvo");
 		Vehicle scania = new Scania(500, Color.BLACK, "Scania");
 		Vehicle saab = new Saab95(100, Color.GREEN, "Saab");
 		
-		cc.setModel(model);
+		
+		cc.setModel(scania);
+		cc.setModel(saab);
+		cc.setModel(volvo);
 		
 		scania.setCurrentY(100);
 		saab.setCurrentY(200);
