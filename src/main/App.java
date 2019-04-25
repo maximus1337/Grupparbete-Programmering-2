@@ -29,10 +29,9 @@ public class App extends Application {
 		Vehicle scania = new Scania(500, Color.BLACK, "Scania");
 		Vehicle saab = new Saab95(100, Color.GREEN, "Saab");
 		
-		
-		cc.setModel(scania);
-		cc.setModel(saab);
-		cc.setModel(volvo);
+		cc.addModel(scania);
+		cc.addModel(saab);
+		cc.addModel(volvo);
 		
 		scania.setCurrentY(100);
 		saab.setCurrentY(200);
@@ -45,6 +44,7 @@ public class App extends Application {
 		root.setBottom(cbp);
 		
 		Scene scene = new Scene(root, WIDTH, HEIGHT, Color.SKYBLUE);
+		primaryStage.setResizable(false);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Car Simulator");
 		primaryStage.show();

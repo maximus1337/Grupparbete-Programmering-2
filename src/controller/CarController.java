@@ -1,30 +1,35 @@
 package controller;
 
+import java.util.ArrayList;
+
 import javafx.animation.AnimationTimer;
 import model.Vehicle;
 import view.CarPane;
 
 public class CarController {
 
-	private Vehicle model;
+	private ArrayList<Vehicle> models = new ArrayList<Vehicle>();
 
 	public CarController(CarPane cp) {
 
 		AnimationTimer at = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
-				if (model != null) {
-					model.move();
-					cp.move(model.getCurrentX(), model.getCurrentY());
-					cp.update();
-				}
 				
-				if(model.getCurrentX() + 100 > 1200) {
-					model.turnLeft();
-				}
-			
-				if(model.getCurrentX() < 0 ) {
-					model.turnRight();
+				for (Vehicle model : models) {
+					if (model != null) {
+						model.move();
+						cp.move(model.getCurrentX(), model.getCurrentY());
+						cp.update();
+					}
+					
+					if(model.getCurrentX() + 100 > 1200) {
+						model.turnLeft();
+					}
+				
+					if(model.getCurrentX() < 0 ) {
+						model.turnRight();
+					}
 				}
 				
 			}
@@ -33,16 +38,20 @@ public class CarController {
 		at.start();
 	}
 
-	public void setModel(Vehicle v) {
-		model = v;
+	public void addModel(Vehicle v) {
+		 models.add(v);
 	}
 
 	public void gas(double amount) {
-		model.gas(amount);
+		for (Vehicle model : models) {
+			model.gas(amount);
+		}
 	}
 
 	public void brake(double amount) {
-		model.brake(amount);
+		for (Vehicle model : models) {
+			model.brake(amount);
+		}
 	}
 
 }

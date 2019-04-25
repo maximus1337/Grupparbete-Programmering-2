@@ -14,23 +14,15 @@ public class CarPane extends Pane {
 
 	public CarPane() {
 		
-		
-		
-	}
-	
-	public void addVolvo() {
 		volvoImage = new ImageView(new Image("/pics/Volvo740.jpg"));
 		this.getChildren().add(volvoImage);
-	}
-	
-	public void addSaab() {
-		saabImage = new ImageView(new Image("/pics/Saab95.jpg"));
-		this.getChildren().add(saabImage);
-	}
-	
-	public void addScania() {
+		
 		scaniaImage = new ImageView(new Image("/pics/Scania.jpg"));
 		this.getChildren().add(scaniaImage);
+		
+		saabImage = new ImageView(new Image("/pics/Saab95.jpg"));
+		this.getChildren().add(saabImage);
+		
 	}
 
 	public void move(double x, double y) {
