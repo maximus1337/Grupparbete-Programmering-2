@@ -3,6 +3,7 @@ package controller;
 import java.util.ArrayList;
 
 import javafx.animation.AnimationTimer;
+import model.Saab95;
 import model.Vehicle;
 import view.CarPane;
 
@@ -51,6 +52,22 @@ public class CarController {
 	public void brake(double amount) {
 		for (Vehicle model : models) {
 			model.brake(amount);
+		}
+	}
+	
+	public void turboOn() {
+		for(Vehicle model : models) {
+			if(model instanceof Saab95) {
+				((Saab95) model).setTurboOn();
+			}
+		}
+	}
+	
+	public void turboOff() {
+		for(Vehicle model : models) {
+			if(model instanceof Saab95) {
+				((Saab95) model).setTurboOn();
+			}
 		}
 	}
 

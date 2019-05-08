@@ -4,7 +4,7 @@ import javafx.scene.paint.Color;
 
 public class Saab95 extends Car{
 
-	private boolean turboOn = false;
+	private static boolean turboOn = false;
 
 	public Saab95(double ep, Color c, String mn) {
 		
@@ -12,11 +12,11 @@ public class Saab95 extends Car{
 		
 	}
 
-	public void setTurboOn() {
+	public  void setTurboOn() {
 		turboOn = true;
 	}
 
-	public void setTurboOff() {
+	public  void setTurboOff() {
 		turboOn = false;
 	}
 

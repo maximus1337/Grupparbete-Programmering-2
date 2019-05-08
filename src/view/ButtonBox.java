@@ -13,21 +13,33 @@ public class ButtonBox extends HBox {
 	private Spinner<Integer> spinner;
 	private Button gasButton;
 	private Button brakeButton;
+	
+	private Button turboOnButton;
+	private Button turboOffButton;
 
 	public ButtonBox(CarController cc) {
 		this.controller = cc;
-		setStyle();
+		setContainerStyle();
+		setTurboStyle();
 		addComponents();
 		addEventListeners();
 	}
 
 	private void addEventListeners() {
-		gasButton.setOnAction(e -> {
+		gasButton.setOnAction(e -> { // All cars
 			controller.gas(spinner.getValue() / 100.0);
 		});
 	
-		brakeButton.setOnAction(e -> {
+		brakeButton.setOnAction(e -> { // All cars
 			controller.brake(spinner.getValue() / 100.0);
+		});
+		
+		turboOnButton.setOnAction(e -> { // Saab turbo on
+			controller.turboOn();
+		});
+		
+		turboOffButton.setOnAction(e -> { // Saab turbo off
+			controller.turboOff();
 		});
 		
 	}
@@ -51,13 +63,34 @@ public class ButtonBox extends HBox {
 		container.getChildren().addAll(spinnerBox, buttonsBox);
 
 		this.getChildren().addAll(container);
-
+		
+		VBox saabTurbo = new VBox();
+		HBox saabButtonBox = new HBox();
+		
+		turboOnButton = new Button("Turbo On");
+		turboOffButton = new Button("Turbo Off");
+		
+		saabButtonBox.getChildren().addAll(turboOnButton, turboOffButton);
+		saabTurbo.getChildren().addAll(saabButtonBox);
+		
+		this.getChildren().addAll(saabTurbo);
+		
 	}
 
-	private void setStyle() {
+	private void setContainerStyle() {
+		
 		this.setPadding(new Insets(15, 12, 15, 12));
 		this.setSpacing(10);
 		this.setStyle("-fx-background-color: #336699;");
+		
+	}
+	
+	private void setTurboStyle() {
+
+		this.setPadding(new Insets(15, 12, 15, 12));
+		this.setSpacing(10);
+		this.setStyle("-fx-background-color: #336699;");
+		
 	}
 
 }
