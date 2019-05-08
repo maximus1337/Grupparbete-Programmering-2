@@ -26,8 +26,8 @@ public class CarPane extends Pane {
 	}
 
 	public void move(double x, double y) {
-		xPos = x;
-		yPos = y;
+		this.xPos = x;
+		this.yPos = y;
 	}
 
 	public void update() {
