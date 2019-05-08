@@ -3,6 +3,10 @@ package view;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import model.Saab95;
+import model.Scania;
+import model.Vehicle;
+import model.Volvo740;
 
 public class CarPane extends Pane {
 
@@ -26,13 +30,38 @@ public class CarPane extends Pane {
 	}
 
 	public void move(double x, double y) {
+		
+		
 		this.xPos = x;
 		this.yPos = y;
+		
 	}
-
-	public void update() {
+	
+	public void updateVolvo() {
 		volvoImage.setX(xPos);
 		volvoImage.setTranslateY(yPos);
+	}
+	
+	public void updateScania() {
+		scaniaImage.setX(xPos);
+		scaniaImage.setTranslateY(yPos);
+	}
+	
+	public void updateSaab() {
+		saabImage.setX(xPos);
+		saabImage.setTranslateY(yPos);
+	}
+
+	public void update(Vehicle m) {
+		if(m instanceof Volvo740) {
+			updateVolvo();
+		}
+		else if(m instanceof Saab95) {
+			updateSaab();
+		}
+		else if(m instanceof Scania) {
+			updateScania();
+		}
 	}
 
 }

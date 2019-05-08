@@ -20,7 +20,7 @@ public class CarController {
 					if (model != null) {
 						model.move();
 						cp.move(model.getCurrentX(), model.getCurrentY());
-						cp.update();
+						cp.update(model);
 					}
 					
 					if(model.getCurrentX() + 100 > 1200) {
