@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 public class ButtonBox extends HBox {
 
@@ -17,8 +18,10 @@ public class ButtonBox extends HBox {
 	private Button turboOnButton;
 	private Button turboOffButton;
 	
-	private Button trailerDownButton;
-	private Button trailerUpButton;
+	private Button flatbedDownButton;
+	private Button flatbedUpButton;
+	private Text flatbedText;
+	private double flatbedAngle = 0;
 
 	public ButtonBox(CarController cc) {
 		this.controller = cc;
@@ -43,6 +46,17 @@ public class ButtonBox extends HBox {
 		
 		turboOffButton.setOnAction(e -> { // Saab turbo off
 			controller.turboOff();
+		});
+		
+		flatbedDownButton.setOnAction(e -> { // Scania raise flatbed
+			updateFlatbedAngle();
+			controller.raiseFlatbed();
+		});
+		
+		flatbedUpButton.setOnAction(e -> { // Scania lower flatbed
+			updateFlatbedAngle();
+			controller.lowerFlatbed();
+			
 		});
 		
 	}
@@ -86,10 +100,11 @@ public class ButtonBox extends HBox {
 		VBox scaniaTrailer = new VBox();
 		HBox scaniaTrailerButtonBox = new HBox();
 		
-		trailerDownButton = new Button("Lower trailer");
-		trailerUpButton = new Button("Raise trailer");
+		flatbedDownButton = new Button("Lower flatbed");
+		flatbedUpButton = new Button("Raise flatbed");
+		flatbedText = new Text("Angle: " + flatbedAngle);
 		
-		scaniaTrailerButtonBox.getChildren().addAll(trailerDownButton,trailerUpButton);
+		scaniaTrailerButtonBox.getChildren().addAll(flatbedDownButton,flatbedUpButton,flatbedText);
 		scaniaTrailer.getChildren().addAll(scaniaTrailerButtonBox);
 		
 		this.getChildren().addAll(scaniaTrailer);
@@ -109,6 +124,12 @@ public class ButtonBox extends HBox {
 		this.setPadding(new Insets(15, 12, 15, 12));
 		this.setSpacing(10);
 		this.setStyle("-fx-background-color: #336699;");
+		
+	}
+	
+	private void updateFlatbedAngle() {
+		
+		flatbedAngle = controller.getScaniaAngle();
 		
 	}
 

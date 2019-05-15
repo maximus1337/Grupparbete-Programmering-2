@@ -18,7 +18,8 @@ public class main {
 		Volvo740 v = new Volvo740(100,Color.BLACK, "Volo");
 		Saab95 s = new Saab95(300,Color.BLACK,"Saab");
 		
-		
+		sc.liftDown(70);
+		System.out.println(sc.getAngle());
 		
 	}
 	

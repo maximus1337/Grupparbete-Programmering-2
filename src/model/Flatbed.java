@@ -20,6 +20,9 @@ public class Flatbed{
 		
 		else {
 			currentAngle += angle;
+			if(currentAngle > 70) {
+				currentAngle = 70;
+			}
 		}
 		
 	}
@@ -39,8 +42,10 @@ public class Flatbed{
 		
 		else {
 			currentAngle -= angle;
+			if(currentAngle < 0) {
+				currentAngle = 0;
+			}
 		}
-		
 		
 	}
 	

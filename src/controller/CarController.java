@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javafx.animation.AnimationTimer;
 import model.Saab95;
+import model.Scania;
 import model.Vehicle;
 import view.CarPane;
 
@@ -69,6 +70,32 @@ public class CarController {
 				((Saab95) model).setTurboOn();
 			}
 		}
+	}
+	
+	public void lowerFlatbed() {
+		for(Vehicle model : models) {
+			if(model instanceof Scania) {
+				((Scania) model).liftDown(5);
+			}
+		}
+	}
+	
+	public void raiseFlatbed() {
+		for(Vehicle model : models) {
+			if(model instanceof Scania) {
+				((Scania) model).liftUp(5);
+			}
+		}
+	}
+	
+	public double getScaniaAngle() {
+		for(Vehicle model : models) {
+			if(model instanceof Scania) {
+				return ((Scania) model).getAngle();
+			}
+			return 0;
+		}
+		return 0;
 	}
 
 }
