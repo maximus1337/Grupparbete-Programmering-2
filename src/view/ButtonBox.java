@@ -16,6 +16,9 @@ public class ButtonBox extends HBox {
 	
 	private Button turboOnButton;
 	private Button turboOffButton;
+	
+	private Button trailerDownButton;
+	private Button trailerUpButton;
 
 	public ButtonBox(CarController cc) {
 		this.controller = cc;
@@ -45,6 +48,7 @@ public class ButtonBox extends HBox {
 	}
 
 	private void addComponents() {
+		/* Gas and break */
 		VBox container = new VBox();
 		HBox spinnerBox = new HBox();
 		HBox buttonsBox = new HBox();
@@ -64,6 +68,8 @@ public class ButtonBox extends HBox {
 
 		this.getChildren().addAll(container);
 		
+		/* Saab turbo */
+		
 		VBox saabTurbo = new VBox();
 		HBox saabButtonBox = new HBox();
 		
@@ -74,6 +80,19 @@ public class ButtonBox extends HBox {
 		saabTurbo.getChildren().addAll(saabButtonBox);
 		
 		this.getChildren().addAll(saabTurbo);
+		
+		/* Scania trailer */
+		
+		VBox scaniaTrailer = new VBox();
+		HBox scaniaTrailerButtonBox = new HBox();
+		
+		trailerDownButton = new Button("Lower trailer");
+		trailerUpButton = new Button("Raise trailer");
+		
+		scaniaTrailerButtonBox.getChildren().addAll(trailerDownButton,trailerUpButton);
+		scaniaTrailer.getChildren().addAll(scaniaTrailerButtonBox);
+		
+		this.getChildren().addAll(scaniaTrailer);
 		
 	}
 
