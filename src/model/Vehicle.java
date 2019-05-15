@@ -12,7 +12,7 @@ public abstract class Vehicle implements Movable{
 	
 	private int direction = 2; // 1 = up, 2 = right, 3 = down, 4 = left
 	private double currentY, currentX;
-	private double currentSpeedTemp = currentSpeed;
+	
 	
 	public Vehicle(double ep, Color c, String mn) {
 		
